@@ -1,16 +1,11 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, TouchableOpacity, View,} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
 interface Prop {
   navigation: any;
 }
 
-interface State {
-  name: string;
-  age: string;
-  mobile: string;
-  address: string;
-}
+interface State {}
 
 export default class Home extends Component<Prop, State> {
   static navigationOptions = {
@@ -19,35 +14,63 @@ export default class Home extends Component<Prop, State> {
 
   constructor(props: Readonly<Prop>) {
     super(props);
-    this.state = {
-      name: '',
-      age: '',
-      mobile: '',
-      address: '',
-    };
   }
 
-  private saveData() {
-    this.props.navigation.navigate('SaveData', {
-      name: this.state.name,
-      age: this.state.age,
-      mobile: this.state.mobile,
-      address: this.state.address,
-    });
+  private saveDataAsyncStorage() {
+    this.props.navigation.navigate('AsyncStorageView');
+  }
+
+  private saveDataSQLite() {
+    this.props.navigation.navigate('AsyncStorageView');
+  }
+
+  private saveDataRealm() {
+    this.props.navigation.navigate('AsyncStorageView');
+  }
+
+  private saveDataMongoDB() {
+    this.props.navigation.navigate('AsyncStorageView');
+  }
+
+  private saveDataFirebase() {
+    this.props.navigation.navigate('AsyncStorageView');
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <Text>Name</Text>
-        <TouchableOpacity onPress={() => this.saveData()}>
+        <Text style={{textAlign: 'center'}}>{'Local Storage Options'}</Text>
+        <TouchableOpacity onPress={() => this.saveDataAsyncStorage()}>
           <View style={{backgroundColor: 'green', padding: 10, marginTop: 20}}>
-            <Text style={{color: 'white', textAlign: 'center'}}>SAVE</Text>
+            <Text style={{color: 'white', textAlign: 'center'}}>
+              {'Async Storage'}
+            </Text>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => this.saveData()}>
+        <TouchableOpacity onPress={() => this.saveDataSQLite()}>
           <View style={{backgroundColor: 'green', padding: 10, marginTop: 20}}>
-            <Text style={{color: 'white', textAlign: 'center'}}>SAVE</Text>
+            <Text style={{color: 'white', textAlign: 'center'}}>
+              {'SQLite 2'}
+            </Text>
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => this.saveDataRealm()}>
+          <View style={{backgroundColor: 'green', padding: 10, marginTop: 20}}>
+            <Text style={{color: 'white', textAlign: 'center'}}>{'Realm'}</Text>
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => this.saveDataMongoDB()}>
+          <View style={{backgroundColor: 'green', padding: 10, marginTop: 20}}>
+            <Text style={{color: 'white', textAlign: 'center'}}>
+              {'Mongo DB'}
+            </Text>
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => this.saveDataFirebase()}>
+          <View style={{backgroundColor: 'green', padding: 10, marginTop: 20}}>
+            <Text style={{color: 'white', textAlign: 'center'}}>
+              {'Firebase'}
+            </Text>
           </View>
         </TouchableOpacity>
       </View>
@@ -60,16 +83,5 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     padding: 20,
-  },
-  textInput: {
-    height: 40,
-    borderColor: 'gray',
-    borderWidth: 1,
-    marginTop: 10,
-    paddingLeft: 5,
-    paddingRight: 5,
-  },
-  text: {
-    marginTop: 10,
   },
 });

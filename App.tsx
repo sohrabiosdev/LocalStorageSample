@@ -10,11 +10,11 @@
 import React from 'react';
 import {createAppContainer, createStackNavigator} from 'react-navigation';
 import Home from './src/screens/Home';
-import SaveData from './src/screens/SaveData';
+import AsyncStorageView from './src/screens/AsyncStorage';
 
 const MainNavigator = createStackNavigator({
   Home: {screen: Home},
-  SaveData: {screen: SaveData},
+  AsyncStorageView: {screen: AsyncStorageView},
 });
 const App = createAppContainer(MainNavigator);
 export default App;
