@@ -27,6 +27,8 @@ target 'LocalStorageSample' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
+  pod 'RNGestureHandler', :podspec => '../node_modules/react-native-gesture-handler/RNGestureHandler.podspec'
+  
   target 'LocalStorageSampleTests' do
     inherit! :search_paths
     # Pods for testing
@@ -35,12 +37,3 @@ target 'LocalStorageSample' do
   use_native_modules!
 end
 
-target 'LocalStorageSample-tvOS' do
-  # Pods for LocalStorageSample-tvOS
-
-  target 'LocalStorageSample-tvOSTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-end
