@@ -1024,6 +1024,11 @@
   resolved "http://nexus.intra.eres.ae/repository/npm/@types/prop-types/-/prop-types-15.7.1.tgz#f1a11e7babb0c3cad68100be381d1e064c68f1f6"
   integrity sha512-CFzn9idOEpHrgdw8JsoTkaDDyRWk1jrzIV8djzcgpq0y9tG4B4lFT+Nxh52DVpDXV+n4+NPNv7M1Dj5uMp6XFg==
 
+"@types/react-native-sqlite-storage@^3.3.1":
+  version "3.3.1"
+  resolved "http://nexus.intra.eres.ae/repository/npm/@types/react-native-sqlite-storage/-/react-native-sqlite-storage-3.3.1.tgz#6d0cc439780c34d187de52e74a5f10527045f96b"
+  integrity sha512-IZMfZb1v1pkBzUsg8nV84QTtkfdU18A7L7iKCQ89sDYIoVpKDiiSvJitmzPTsNw8uuaU+eZW4nqptZFbmnjF3w==
+
 "@types/react-native@^0.60.8":
   version "0.60.8"
   resolved "http://nexus.intra.eres.ae/repository/npm/@types/react-native/-/react-native-0.60.8.tgz#71f340b4b97ed0b1161f942354e0eebc9fbe5b00"
@@ -5287,6 +5292,11 @@ react-native-safe-area-view@^0.14.1:
   integrity sha512-tOxHGQUN83MTmQB4ghoQkibqOdGiX4JQEmeyEv96MKWO/x8T2PJv84ECUos9hD3blPRQwVwSpAid1PPPhrVEaw==
   dependencies:
     debounce "^1.2.0"
+
+react-native-sqlite-storage@^4.0.0:
+  version "4.0.0"
+  resolved "http://nexus.intra.eres.ae/repository/npm/react-native-sqlite-storage/-/react-native-sqlite-storage-4.0.0.tgz#61fe6bd008e56c5d5e47132e620d99d066a7f61c"
+  integrity sha512-Knwo/loHz8uHQAW6XIRjFgmxGl3eCWAoghHl72emBfxXlcyDgbeID24ow4UXcpyTuegIkVtGn9C/ET2RrBfAGA==
 
 react-native-tab-view@^1.2.0, react-native-tab-view@^1.4.1:
   version "1.4.1"

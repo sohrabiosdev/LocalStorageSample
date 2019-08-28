@@ -10,9 +10,11 @@
     "ios": "react-native run-ios"
   },
   "dependencies": {
+    "@types/react-native-sqlite-storage": "^3.3.1",
     "react": "16.8.6",
     "react-native": "0.60.5",
     "react-native-gesture-handler": "^1.4.1",
+    "react-native-sqlite-storage": "^4.0.0",
     "react-navigation": "^3.12.1"
   },
   "devDependencies": {
