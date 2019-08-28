@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
 import {
+  Alert,
+  AsyncStorage,
+  ScrollView,
   StyleSheet,
   Text,
   TextInput,
   TouchableOpacity,
   View,
-  AsyncStorage,
-  ScrollView,
 } from 'react-native';
 
 interface Prop {
@@ -75,10 +76,33 @@ export default class AsyncStorageView extends Component<Prop, State> {
     }
   };
 
+  private showTheory() {
+    Alert.alert(
+      'Async Storage',
+      'AsyncStorage is a simple, unencrypted, asynchronous, persistent, key-value storage system that is global to the app.' +
+        '\n\n It should be used instead of LocalStorage. On iOS, AsyncStorage is backed by native code that stores small values in a serialized dictionary and larger values in separate files.' +
+        '\n\n On Android, AsyncStorage will use either RocksDB or SQLite based on what is available.' +
+        '\n\n The AsyncStorage JavaScript code is a simple facade that provides a clear JavaScript API, real Error objects, and simple non-multi functions. Each method in the API returns a Promise object.' +
+        '\n\n https://facebook.github.io/react-native/docs/asyncstorage.html',
+    );
+  }
+
   render() {
     return (
       <View style={styles.container}>
         <ScrollView>
+          <TouchableOpacity onPress={() => this.showTheory()}>
+            <View
+              style={{
+                backgroundColor: 'black',
+                padding: 10,
+                marginTop: 0,
+                borderRadius: 10,
+              }}>
+              <Text style={{color: 'white', textAlign: 'center'}}>THEORY</Text>
+            </View>
+          </TouchableOpacity>
+          <View style={{height: 10}} />
           <Text>Name</Text>
           <TextInput
             style={styles.textInput}
@@ -105,13 +129,23 @@ export default class AsyncStorageView extends Component<Prop, State> {
           />
           <TouchableOpacity onPress={() => this.saveData()}>
             <View
-              style={{backgroundColor: 'green', padding: 10, marginTop: 20}}>
+              style={{
+                backgroundColor: 'green',
+                padding: 10,
+                marginTop: 20,
+                borderRadius: 10,
+              }}>
               <Text style={{color: 'white', textAlign: 'center'}}>SAVE</Text>
             </View>
           </TouchableOpacity>
           <TouchableOpacity onPress={() => this.viewData()}>
             <View
-              style={{backgroundColor: 'green', padding: 10, marginTop: 20}}>
+              style={{
+                backgroundColor: 'green',
+                padding: 10,
+                marginTop: 20,
+                borderRadius: 10,
+              }}>
               <Text style={{color: 'white', textAlign: 'center'}}>
                 VIEW DATA
               </Text>
