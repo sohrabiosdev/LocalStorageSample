@@ -10,7 +10,7 @@
 import React, {Component} from 'react';
 import RootNavigator from './src/screens/RootNavigator';
 import {AppState} from 'react-native';
-import {database} from './src/screens/SQLite/Database';
+import {database} from './src/screens/SQLite/Database/Database';
 
 interface Props {}
 

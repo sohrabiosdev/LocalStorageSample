@@ -10,6 +10,7 @@ import {
   View,
 } from 'react-native';
 import SQLite from 'react-native-sqlite-storage';
+import {database} from './Database/Database';
 
 interface Prop {
   navigation: any;
@@ -22,6 +23,7 @@ interface State {
   address: string;
   refresh: boolean;
 }
+
 
 export default class SQLiteView extends Component<Prop, State> {
   name: string | null = null;
@@ -53,6 +55,9 @@ export default class SQLiteView extends Component<Prop, State> {
       location: 'default',
     }).then(db => {
       console.log('Database open!');
+      database.createList('Sohrab Hussain').then(r => {
+        console.log('Names Table Ceated!');
+      });
     });
   }
 
