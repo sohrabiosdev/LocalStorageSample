@@ -13,6 +13,8 @@
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		45A6971323165BD900167B5C /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A6971223165BD900167B5C /* libsqlite3.0.tbd */; };
+		45A6971523165C0C00167B5C /* libreact-native-sqlite-storage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A6971423165C0C00167B5C /* libreact-native-sqlite-storage.a */; };
 		B83A5132C2C5DEBC7C9BF84D /* libPods-LocalStorageSampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 617BEFCAE14CD0A6820DCDDB /* libPods-LocalStorageSampleTests.a */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +44,8 @@
 		29E7F0A3A0AF80ADC55FAE55 /* Pods-LocalStorageSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalStorageSample.release.xcconfig"; path = "Target Support Files/Pods-LocalStorageSample/Pods-LocalStorageSample.release.xcconfig"; sourceTree = "<group>"; };
 		2FB9E4926825CECEDD56AF30 /* Pods-LocalStorageSample-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalStorageSample-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-LocalStorageSample-tvOSTests/Pods-LocalStorageSample-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		323BBC66CD330362AF54D2EB /* Pods-LocalStorageSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalStorageSampleTests.release.xcconfig"; path = "Target Support Files/Pods-LocalStorageSampleTests/Pods-LocalStorageSampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		45A6971223165BD900167B5C /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		45A6971423165C0C00167B5C /* libreact-native-sqlite-storage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libreact-native-sqlite-storage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5293D5EE8896C188A12BF69C /* Pods-LocalStorageSample-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalStorageSample-tvOS.release.xcconfig"; path = "Target Support Files/Pods-LocalStorageSample-tvOS/Pods-LocalStorageSample-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		617BEFCAE14CD0A6820DCDDB /* libPods-LocalStorageSampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LocalStorageSampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EBC02EE01911BF4BA1A292B /* Pods-LocalStorageSample-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalStorageSample-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-LocalStorageSample-tvOSTests/Pods-LocalStorageSample-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -67,6 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45A6971523165C0C00167B5C /* libreact-native-sqlite-storage.a in Frameworks */,
+				45A6971323165BD900167B5C /* libsqlite3.0.tbd in Frameworks */,
 				069DC977CF3E91C2684A7191 /* libPods-LocalStorageSample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,6 +114,8 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				45A6971423165C0C00167B5C /* libreact-native-sqlite-storage.a */,
+				45A6971223165BD900167B5C /* libsqlite3.0.tbd */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				EAE9DD1F1CD4160C691C37DA /* libPods-LocalStorageSample.a */,
