@@ -8,6 +8,7 @@ import {
   TextInput,
   TouchableOpacity,
   View,
+  Linking,
 } from 'react-native';
 import SQLite from 'react-native-sqlite-storage';
 import {database} from './Database/Database';
@@ -96,12 +97,21 @@ export default class SQLiteView extends Component<Prop, State> {
 
   private showTheory() {
     Alert.alert(
-      'SqLite Storage',
-      'AsyncStorage is a simple, unencrypted, asynchronous, persistent, key-value storage system that is global to the app.' +
-        '\n\n It should be used instead of LocalStorage. On iOS, AsyncStorage is backed by native code that stores small values in a serialized dictionary and larger values in separate files.' +
-        '\n\n On Android, AsyncStorage will use either RocksDB or SQLite based on what is available.' +
-        '\n\n The AsyncStorage JavaScript code is a simple facade that provides a clear JavaScript API, real Error objects, and simple non-multi functions. Each method in the API returns a Promise object.' +
-        '\n\n https://facebook.github.io/react-native/docs/asyncstorage.html',
+      'SQLite Storage',
+      'https://brucelefebvre.com/blog/2018/11/06/react-native-offline-first-db-with-sqlite/',
+      [
+        {
+          text: 'Open Website',
+          onPress: () =>
+            Linking.openURL(
+              'https://brucelefebvre.com/blog/2018/11/06/react-native-offline-first-db-with-sqlite/',
+            ),
+        },
+        {
+          text: 'Cancel',
+        },
+      ],
+      {cancelable: true},
     );
   }
 
